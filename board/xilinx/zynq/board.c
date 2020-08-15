@@ -93,7 +93,8 @@ int board_late_init(void)
 {
 	switch ((zynq_slcr_get_boot_mode()) & ZYNQ_BM_MASK) {
 	case ZYNQ_BM_QSPI:
-		env_set("modeboot", "qspiboot");
+		//env_set("modeboot", "qspiboot");
+		env_set("modeboot", "sdboot");
 		break;
 	case ZYNQ_BM_NAND:
 		env_set("modeboot", "nandboot");
